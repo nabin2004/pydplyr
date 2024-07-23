@@ -1,9 +1,9 @@
-# Pydplyr
+# pydplyr
 ## Simplicity and conciseness of R with the blazing speed of Rust.
 
-Key Features:
+### Key Features:
 - 5 verbs for Data work
-- Follows grammar of graphics for visualization
+- Follows grammar of graphics for visualizations
 - Simplified Regular Expressions 
 
 
