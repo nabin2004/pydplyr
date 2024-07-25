@@ -1,12 +1,17 @@
 # pydplyr
 ## Simplicity and conciseness of R with the blazing speed of Rust.
 
+```
+For first Release, I'll be using Pandas instead of Rust for the initial version .
+```
+
+
 ### Key Features:
 - 5 verbs for Data work
 - Follows grammar of graphics for visualizations
 - Simplified Regular Expressions 
 
-
+    
 ## Five verbs available
 1. Arrange
 2. Select
