@@ -1,4 +1,6 @@
-def mutate(df, col1, col2, new_column, operation):
+from pandas import DataFrame
+
+def mutate(df: DataFrame, col1: str, col2: str, new_column:str, operation:str)-> DataFrame:
     """
     A simple mutate function that creates a new column by applying an operation 
     on two existing columns and prints a message when called.

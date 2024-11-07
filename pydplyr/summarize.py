@@ -1,4 +1,6 @@
-def summarize(df):
+from pandas import DataFrame
+
+def summarize(df:DataFrame)-> DataFrame:
     """A simple summarize function that info about the dataframe.
 
     Args:

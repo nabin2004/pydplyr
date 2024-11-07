@@ -1,4 +1,6 @@
-def filter(df, condition):
+from pandas import DataFrame
+
+def filter(df: DataFrame, condition:str)-> DataFrame:
     """A simple filter function that filters datasets when given a condition.
 
     Args: 

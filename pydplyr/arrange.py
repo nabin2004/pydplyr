@@ -1,6 +1,6 @@
-import pandas as pd
+from pandas import DataFrame
 
-def arrange(df, column):
+def arrange(df:DataFrame, column:str) -> DataFrame:
     """A simple arrange function that sorts values in a DataFrame based on a condition.
 
     Args:
