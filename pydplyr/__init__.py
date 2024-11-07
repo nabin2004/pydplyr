@@ -5,3 +5,4 @@ from .filter import *
 from .mutate import *
 from .select import *
 from .summarize import *
+from pandas import *

@@ -1,3 +1,4 @@
+import pandas as pd
 
 def arrange(df, column):
     """A simple arrange function that sorts values in a DataFrame based on a condition.
@@ -9,7 +10,7 @@ def arrange(df, column):
     Returns:
         A pandas DataFrame that has been sorted based on the condition
     """
-    return df.sort_values(by=column, inplace=True)
+    return df.sort_values(by=column)
 
 
 if __name__ == "__main__":
