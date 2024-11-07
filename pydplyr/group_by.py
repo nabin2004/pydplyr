@@ -1,7 +1,7 @@
 from pandas import DataFrame
 from typing import List
 
-def group_by(df: DataFrame, *columns: str) -> pd.core.groupby.DataFrameGroupBy:
+def group_by(df: DataFrame, *columns: str) -> DataFrame:
     """
     A group_by function that groups a DataFrame by one or more columns.
 
