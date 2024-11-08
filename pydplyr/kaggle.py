@@ -47,3 +47,16 @@ def plot_new_feature_distribution(df1, df2, label1, label2, features):
         plt.tick_params(axis='x', which='major', labelsize=8)
         plt.tick_params(axis='y', which='major', labelsize=8)
     plt.show();
+
+def plot_feature_scatter(df1, df2, features):
+    i = 0
+    sns.set_style('whitegrid')
+    plt.figure()
+    fig, ax = plt.subplots(4,4,figsize=(14,14))
+
+    for feature in features:
+        i += 1
+        plt.subplot(4,4,i)
+        plt.scatter(df1[feature], df2[feature], marker='+')
+        plt.xlabel(feature, fontsize=9)
+    plt.show();
