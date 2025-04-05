@@ -1,5 +1,5 @@
 import pandas as pd
-from typing import Union
+from typing import List, Optional
 from pydplyr.arrange import asc, desc
 
 class Panel:
@@ -35,6 +35,20 @@ class Panel:
     def summarize(self, **kwargs):
         from pydplyr.summarize import summarize
         return summarize(self.df, **kwargs) 
+    
+    def distinct(self, columns: Optional[List[str]] = None) -> "Panel":
+        """
+        Removes duplicate rows based on the specified columns (or all columns by default).
+
+        Args:
+            columns: Optional list of column names to check for uniqueness.
+        
+        Returns:
+            A new Panel with the distinct rows.
+        """
+        from pydplyr.distinct import distinct
+        df = distinct(self.df, columns)
+        return Panel(df)
 
     def collect(self):
         return self.df
