@@ -1,6 +1,6 @@
-from pandas import DataFrame 
+from pandas import DataFrame
 
-def select(df:DataFrame, *columns:str)-> DataFrame:
+def select(df: DataFrame, *columns: str) -> DataFrame:
     """
     A simple select function that returns a DataFrame with only the specified columns.
 

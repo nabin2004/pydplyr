@@ -1,31 +1,20 @@
 from pandas import DataFrame
 
-def mutate(df: DataFrame, col1: str, col2: str, new_column:str, operation:str)-> DataFrame:
+def mutate(df: DataFrame, **kwargs) -> DataFrame:
     """
-    A simple mutate function that creates a new column by applying an operation 
-    on two existing columns and prints a message when called.
+    Creates new columns based on expressions.
     
     Args:
-        df: A pandas DataFrame
-        col1: The first column to use in the operation
-        col2: The second column to use in the operation
-        new_column: The name of the new column to create
-        operation: A string representing the operation ('+', '-', '*', '/')
+        df: A pandas DataFrame.
+        **kwargs: Keyword arguments where the key is the new column name and the value is the expression.
+                  The expression can be a string representing a valid operation (e.g., "score + age").
     
     Returns:
-        A pandas DataFrame with the new column added
+        A new pandas DataFrame with the modified columns.
     """
-    operations = {
-        '+': lambda x, y: x + y,
-        '-': lambda x, y: x - y,
-        '*': lambda x, y: x * y,
-        '/': lambda x, y: x / y
-    }
-    
-    if operation in operations:
-        df[new_column] = operations[operation](df[col1], df[col2])
-    else:
-        raise ValueError(f"Unsupported operation '{operation}'. Supported operations are: {list(operations.keys())}")
+    for col, expr in kwargs.items():
+        df[col] = df.eval(expr)
+    return df
 
 
 if __name__ == "__main__":
