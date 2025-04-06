@@ -2,7 +2,7 @@
 
 <p align="center">
   <em>Simplicity and conciseness of R,<br>
-  with the blazing speed and future-proof power of Rust.</em>
+  with the blazing speed of Rust.</em>
 </p>
 
 <p align="center">
